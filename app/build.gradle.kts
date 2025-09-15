@@ -16,7 +16,7 @@ plugins {
 
 android {
     namespace = "com.example.myordermanager"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.myordermanager"
@@ -139,5 +139,9 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation (libs.androidx.hilt.navigation.compose)
     implementation(libs.play.services.auth)
+    // retrofit
+    implementation(libs.retrofit)
+// gson converter`
+    implementation(libs.converter.gson)
 
 }

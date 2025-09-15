@@ -1,4 +1,4 @@
-package com.example.myordermanager.application
+package com.example.myordermanager.presentation
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

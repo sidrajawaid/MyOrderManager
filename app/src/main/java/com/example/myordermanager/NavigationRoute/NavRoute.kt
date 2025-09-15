@@ -7,9 +7,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.myordermanager.ViewModel.AuthenticationViewmodel
-import com.example.myordermanager.ui.DashboardScreen
-import com.example.myordermanager.ui.LoginScreen
 import kotlinx.serialization.Serializable
 
 
@@ -33,9 +30,9 @@ fun Route() {
   //  val viewmodel : AuthenticationViewmodel = viewModel()
    // val viewmodel = hiltvi<AuthenticationViewmodel>()
     NavHost(navController = navController, startDestination = Dashboard) {
-        composable<Dashboard> { DashboardScreen()
+        composable<Dashboard> { /*DashboardScreen()*/
         }
-        composable<Login> { LoginScreen("",hiltViewModel<AuthenticationViewmodel>())
+        composable<Login> { /*LoginScreen("",hiltViewModel<AuthenticationViewmodel>())*/
         }
         composable<Splash> { SplashScreen( /* ... */) }
        }

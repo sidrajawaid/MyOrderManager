@@ -1,4 +1,4 @@
-package com.example.myordermanager.ViewModel
+package com.example.myordermanager.domain.repository
 
 import android.content.Context
 import android.credentials.GetCredentialException
