@@ -4,8 +4,7 @@ package com.example.myordermanager.presentation.components
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,8 +18,10 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun OutlinedTextFieldComponent( isEnabled: Boolean, isReadOnly: Boolean, isErr: Boolean, isSingleLine:Boolean,
-                                maxLines:Int, options: KeyboardOptions, edtLabel:String){
+fun OutlinedTextFieldComponent(
+    isEnabled: Boolean, isReadOnly: Boolean, isErr: Boolean, isSingleLine: Boolean,
+    maxLines: Int,  edtLabel: String, options: KeyboardActions
+){
 
     var text by remember { mutableStateOf(TextFieldValue("") )}
 
@@ -28,7 +29,7 @@ fun OutlinedTextFieldComponent( isEnabled: Boolean, isReadOnly: Boolean, isErr: 
     OutlinedTextField(
         value = text,
         onValueChange = { newText -> text = newText },
-        label = { Text("Email Address") },
+        label = { Text(edtLabel) },
         placeholder = { Text("Enter your email")
         },
         enabled = isEnabled,
@@ -38,7 +39,8 @@ fun OutlinedTextFieldComponent( isEnabled: Boolean, isReadOnly: Boolean, isErr: 
             .background(color = Color.Gray)
             .fillMaxWidth(),
         singleLine = isSingleLine,
-        maxLines = maxLines
+        maxLines = maxLines,
+        keyboardActions = options
     )
 
 }
