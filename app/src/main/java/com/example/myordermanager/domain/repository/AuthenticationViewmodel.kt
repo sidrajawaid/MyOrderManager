@@ -114,7 +114,7 @@ class AuthenticationViewmodel @Inject constructor(
 
         val googleIdOption=  GetGoogleIdOption.Builder()
             .setFilterByAuthorizedAccounts(true)
-            .setServerClientId(context.getString(R.string.server_client_id))
+           // .setServerClientId(context.getString(R.string.server_client_id))
             .setAutoSelectEnabled(true)
             .setNonce(generateNonce())
             .build()

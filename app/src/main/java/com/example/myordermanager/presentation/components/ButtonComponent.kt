@@ -1,5 +1,7 @@
 package com.example.myordermanager.presentation.components
 
+import android.content.Context
+import com.example.myordermanager.R
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -17,17 +19,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 
 
 @Composable
-fun LargeFilledButton(buttonText:String) {
+fun LargeFilledButton(context: Context,buttonText:String, onClick:(String)->Unit) {
 
-    FilledIconButton (onClick = {/*TODO()*/},
+    FilledIconButton (onClick = {onClick(context.getString(R.string.api_key))},
         modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth()
@@ -110,6 +114,6 @@ fun SmallOutlinedButton(buttonText:String) {
 @Composable
 @Preview
 fun  previewButton(){
-    LargeFilledButton("men fn n")
+//LargeFilledButton("men fn n")
 
 }

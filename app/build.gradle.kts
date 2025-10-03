@@ -129,16 +129,16 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.ui.text.google.fonts)
     implementation(libs.firebase.auth)
-    implementation(libs.googleid)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.core.splashscreen)
     //hilt
     implementation(libs.hilt.android)
+    implementation(libs.googleid)
+    implementation(libs.identity.jvm)
     kapt(libs.hilt.compiler)
     implementation (libs.androidx.hilt.navigation.compose)
     implementation(libs.play.services.auth)
+        // credential manager
+    implementation(libs.androidx.credentials.play.services.auth)
     // retrofit
     implementation(libs.retrofit)
 // gson converter`

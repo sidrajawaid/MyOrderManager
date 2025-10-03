@@ -39,6 +39,7 @@ googleGmsGoogleServices = "4.4.2"
 firebaseAuth = "23.2.0"
 googleid = "1.1.1"
 hiltVersion="2.51.1"
+identityJvm = "202411.1"
 
 [libraries]
 androidx-animation-android = { module = "androidx.compose.animation:animation-android", version.ref = "animationAndroid" }
@@ -79,6 +80,7 @@ firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version
 googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+identity-jvm = { group = "com.android.identity", name = "identity-jvm", version.ref = "identityJvm" }
 
 
 
