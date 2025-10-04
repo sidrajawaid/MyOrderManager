@@ -1,8 +1,10 @@
 package com.example.myordermanager.domain.repository
 
+import android.app.Activity
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.myordermanager.R
 import com.example.myordermanager.presentation.GoogleSignInManager
 import dagger.hilt.android.internal.Contexts.getApplication
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,20 +17,21 @@ import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel  @Inject constructor(
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val cntxt: Context
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<LoginState>(LoginState.Idle)
     val uiState: StateFlow<LoginState> = _uiState.asStateFlow()
 
-    fun signInUser(apiKey: String) {
+    fun signInUser(cntxt:Context, apiKey: String) {
+
         viewModelScope.launch {
             _uiState.value = LoginState.Loading
 
             try {
                 GoogleSignInManager.signInWithGoogle(
-                    context = getApplication(context),
-                    apiKey = apiKey,
+                    context = cntxt,
+                    apiKey = cntxt.getString(R.string.client_id),
                     onSuccess = { result ->
                         _uiState.value = LoginState.Success(result.displayName)
                         // Save to database, navigate to home, etc.

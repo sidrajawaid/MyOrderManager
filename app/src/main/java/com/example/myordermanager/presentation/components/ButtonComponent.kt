@@ -25,13 +25,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.myordermanager.common.requireActivity
 import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 
 
 @Composable
-fun LargeFilledButton(context: Context,buttonText:String, onClick:(String)->Unit) {
+fun LargeFilledButton(context: Context,buttonText:String, onClick:(Context,String)->Unit) {
 
-    FilledIconButton (onClick = {onClick(context.getString(R.string.api_key))},
+    FilledIconButton (onClick = {onClick(context.requireActivity(),context.getString(R.string.temp))},
         modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth()

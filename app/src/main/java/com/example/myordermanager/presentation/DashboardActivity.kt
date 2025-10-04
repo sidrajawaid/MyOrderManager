@@ -11,7 +11,8 @@ class DashboardActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
+GoogleCloudConsoleSetupDebug.checkCurrentSetup(this)
+          //  GoogleCloudConsoleSetupDebug.openGoogleCloudConsole(this)
             LoginScreen()
         }
     }

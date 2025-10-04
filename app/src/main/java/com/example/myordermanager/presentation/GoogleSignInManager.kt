@@ -9,6 +9,7 @@ import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
 import androidx.credentials.GetCredentialResponse
 import androidx.credentials.exceptions.NoCredentialException
+import com.example.myordermanager.R
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingException
@@ -26,7 +27,7 @@ object GoogleSignInManager {
     suspend fun signInWithGoogle(
         context: Context,
         apiKey: String,
-        filterByAuthorizedAccounts: Boolean = true,
+        filterByAuthorizedAccounts: Boolean = false,
         onSuccess: (SignInResult) -> Unit,
         onError: (Exception) -> Unit
     ) {
