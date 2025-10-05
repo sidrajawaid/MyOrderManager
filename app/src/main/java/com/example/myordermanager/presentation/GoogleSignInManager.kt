@@ -3,6 +3,8 @@ package com.example.myordermanager.presentation
 
 
 import android.content.Context
+import android.util.Log
+import android.widget.Toast
 import androidx.credentials.Credential
 import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
@@ -76,6 +78,8 @@ object GoogleSignInManager {
                 )
             } else {
                 onError(e)
+                Toast.makeText(context, e.message,Toast.LENGTH_SHORT).show()
+                Log.d("SignIn error","")
             }
         }
     }

@@ -20,10 +20,6 @@
             "package_name": "com.example.myordermanager",
             "certificate_hash": "f01be3ccce28f6d5c42a5820011b6f93476613a5"
           }
-        },
-        {
-          "client_id": "959648160791-6bpa62hagnbtvv22u7usbv6j43c0o5ce.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
       "api_key": [
@@ -35,7 +31,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "959648160791-6bpa62hagnbtvv22u7usbv6j43c0o5ce.apps.googleusercontent.com",
+              "client_id": "959648160791-eg0us3eqbejomqsl4c7rt22bv521mc82.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -51,8 +47,12 @@
       },
       "oauth_client": [
         {
-          "client_id": "959648160791-6bpa62hagnbtvv22u7usbv6j43c0o5ce.apps.googleusercontent.com",
-          "client_type": 3
+          "client_id": "959648160791-pman85gh9kpp78e1rebmjgqdgmtb1mgh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myordermanager.dev.debug",
+            "certificate_hash": "f01be3ccce28f6d5c42a5820011b6f93476613a5"
+          }
         }
       ],
       "api_key": [
@@ -64,7 +64,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "959648160791-6bpa62hagnbtvv22u7usbv6j43c0o5ce.apps.googleusercontent.com",
+              "client_id": "959648160791-eg0us3eqbejomqsl4c7rt22bv521mc82.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -74,3 +74,23 @@
   ],
   "configuration_version": "1"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

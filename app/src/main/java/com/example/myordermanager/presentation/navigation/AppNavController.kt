@@ -12,7 +12,6 @@ import androidx.navigation.compose.rememberNavController
 import com.example.myordermanager.NavigationRoute.Dashboard
 import com.example.myordermanager.NavigationRoute.Login
 import com.example.myordermanager.NavigationRoute.Splash
-import com.example.myordermanager.NavigationRoute.SplashScreen
 
 @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
 @Composable

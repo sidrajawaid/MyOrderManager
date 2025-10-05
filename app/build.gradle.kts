@@ -50,7 +50,7 @@ android {
                 "proguard-rules.pro"
             )
         }*/
-        getByName("release") {
+       /* getByName("release") {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
@@ -58,6 +58,17 @@ android {
         getByName("debug") {
             applicationIdSuffix = ".debug"
             isDebuggable = true
+        }*/
+        debug {
+            applicationIdSuffix =".debug"
+            versionNameSuffix= "-debug"
+            isDebuggable= true
+        }
+
+        release {
+            isMinifyEnabled =true
+            isShrinkResources= true
+            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
     }
 
@@ -90,7 +101,8 @@ android {
 
     buildFeatures {
         compose = true
-        viewBinding = true
+        buildConfig=true
+
     }
 }
 

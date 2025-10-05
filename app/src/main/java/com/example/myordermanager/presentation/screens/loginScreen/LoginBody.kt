@@ -15,6 +15,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.compose.rememberNavController
+import com.example.myordermanager.domain.repository.LoginState
 import com.example.myordermanager.domain.repository.LoginViewModel
 import com.example.myordermanager.presentation.components.LargeFilledButton
 import com.example.myordermanager.presentation.components.LargeTitleHeading
@@ -23,6 +26,7 @@ import com.example.myordermanager.presentation.components.OutlinedTextFieldCompo
 
 @Composable
 fun LoginBody(loginViewModel: LoginViewModel  = hiltViewModel()){
+    val navController= rememberNavController()
     Scaffold( modifier = Modifier.fillMaxSize())
     { paddingValue ->
         Box(
@@ -49,9 +53,16 @@ fun LoginBody(loginViewModel: LoginViewModel  = hiltViewModel()){
                     true, 1, "Enter password", "Password",
                     KeyboardOptions(keyboardType = KeyboardType.Password)
                 )
+
                 LargeFilledButton(LocalContext.current,"Login!",loginViewModel::signInUser)
 
 
+            }
+
+            when(loginViewModel.uiState.collectAsStateWithLifecycle().value) {
+
+                is LoginState.Success -> { navController.navigate("main")}
+                else -> {}
             }
         }
     }
